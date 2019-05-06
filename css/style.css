@@ -762,4 +762,8 @@ body {
 	.pop-up-about__title {
 		font-size: 32px;
 	}
+	.copyright-block__left {
+		min-width: 300px;
+		text-align: center;
+	}
 }
