@@ -106,6 +106,17 @@ body {
 .navigation-menu__item {
 	list-style: none;
 }
+.navigation-menu__item:after {
+	content: '';
+	display: block;
+	height: 2px;
+	background-color: white;
+	transition: 0.2s;
+	transform: scale(0);
+}
+.navigation-menu__item:hover:after {
+	transform: scale(1);
+}
 .navigation-menu__item>a {
 	text-decoration: none;
 	font-size: 20px;
@@ -441,8 +452,13 @@ body {
 	color: white;
 }
 .slide-round {
+	transition: transform 1s;
 	width: 100%;
 	margin-left: 10px;
+	transform: translateX(100%);
+}
+.slide-round__slided {
+	transform: translateX(0px);
 }
 .footer-block {
 	display: -webkit-box;
@@ -480,8 +496,10 @@ body {
 .fa:before {
 	display: block;
 	font-size: 25px;
-	/*text-align: center;
-	margin-top: 7px;*/
+	transition: color 0.3s;
+}
+.social__link:hover>.fa:before {
+	color: #fa6900;
 }
 .social__link:first-child {
 	border-top-left-radius: 3px;

@@ -63,3 +63,13 @@ $(document).ready(function(){
 	$('.menu').toggleClass('menu-show');
 	$('.menu-button__toggler').toggleClass('toggled');
 });
+
+$(window).scroll(function() {
+   if($(this).scrollTop() > $('.employee').offset().top) {
+		 console.log('222');
+		 if (!$('.slide-round').hasClass('slide-round__slided')) {
+			$('.slide-round').toggleClass('slide-round__slided');
+		 }
+       // getData();
+   }
+});
